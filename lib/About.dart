@@ -239,7 +239,7 @@ class About extends StatelessWidget {
               //Rounds the corners of the image
               borderRadius: BorderRadius.circular(20.0),
               child: Image.asset(
-                'asset/pic1.jpg',
+                'asset/pic2.jpg',
                 fit: BoxFit.cover,
               ),
             ),
