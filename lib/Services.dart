@@ -272,6 +272,22 @@ class Services extends StatelessWidget {
                     label: Text(
                       'Business plan Consultation',
                       style: TextStyle(color: Colors.black),
+              GridView.count(
+                shrinkWrap: true,
+                primary: false,
+                padding: const EdgeInsets.all(30),
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20,
+                crossAxisCount: 2,
+                childAspectRatio: 3.5,
+                children: <Widget>[
+                  Container(
+                    //padding: const EdgeInsets.all(8),
+                    //color: Colors.teal[100],
+                    child: ElevatedButton.icon(
+                      label: Text('Business plan Consultation', style: TextStyle(color: Colors.black),),
+                      icon: Icon(Icons.business, color: Colors.black,),
+                      onPressed: () {},
                     ),
                     icon: Icon(
                       Icons.business,
