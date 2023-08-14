@@ -1,164 +1,57 @@
-// // ignore_for_file: prefer_const_constructors
-
-// import 'package:flutter/material.dart';
-
-// class Welcome extends StatelessWidget {
-//   const Welcome({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return SafeArea(
-//       child: Scaffold(
-//         body: SizedBox(
-//           height: double.infinity,
-//           width: double.infinity,
-//           child: Stack(
-//             children: [
-//               SizedBox(
-//                 width: double.infinity,
-//                 child: Column(
-//                   crossAxisAlignment: CrossAxisAlignment.center,
-//                   children: [
-//                     SizedBox(
-//                       height: 35,
-//                     ),
-//                     Text(
-//                       "Welcome",
-//                       style: TextStyle(fontSize: 33, fontFamily: "myfont"),
-//                     ),
-//                     SizedBox(
-//                       height: 35,
-//                     ),
-//                     SizedBox(
-//                       height: 35,
-//                     ),
-//                     ElevatedButton(
-//                       onPressed: () {
-//                         Navigator.pushNamed(context, "/login");
-//                       },
-//                       style: ButtonStyle(
-//                         backgroundColor:
-//                             MaterialStateProperty.all(Colors.purple),
-//                         padding: MaterialStateProperty.all(
-//                             EdgeInsets.symmetric(horizontal: 79, vertical: 10)),
-//                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(27))),
-//                       ),
-//                       child: Text(
-//                         "login",
-//                         style: TextStyle(fontSize: 24),
-//                       ),
-//                     ),
-//                     SizedBox(
-//                       height: 22,
-//                     ),
-//                     ElevatedButton(
-//                       onPressed: () {
-//                         Navigator.pushNamed(context, "/signup");
-//                       },
-//                       style: ButtonStyle(
-//                         backgroundColor:
-//                             MaterialStateProperty.all(Colors.purple[100]),
-//                         padding: MaterialStateProperty.all(
-//                             EdgeInsets.symmetric(horizontal: 77, vertical: 13)),
-//                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(27))),
-//                       ),
-//                       child: Text(
-//                         "SIGNUP",
-//                         style: TextStyle(fontSize: 17, color: Colors.grey[850]),
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               Positioned(
-//                 left: 0,
-//                 child: Image.asset(
-//                   "assets/images/main_top.png",
-//                   width: 111,
-//                 ),
-//               ),
-//               Positioned(
-//                 bottom: 0,
-//                 child: Image.asset(
-//                   "assets/images/main_bottom.png",
-//                   width: 111,
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
-
-/*void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Services(),
-    );
-  }
-}*/
 
 class Services extends StatelessWidget {
   Services({super.key});
 
-  GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-          key: _globalKey,
-          drawer: Drawer(
+      child: Scaffold(
+        key: _globalKey,
+        drawer: Drawer(
+          child: Container(
+            color: Colors.grey[300],
             child: ListView(
               // Important: Remove any padding from the ListView.
               padding: EdgeInsets.zero,
               children: <Widget>[
                 UserAccountsDrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                  ),
                   accountName: Text("name"),
                   accountEmail: Text("email"),
                   currentAccountPicture: CircleAvatar(
-                    backgroundColor: Colors.orange[50],
+                    backgroundColor: Colors.grey[200],
                     child: Text(
                       "A",
                       style: TextStyle(fontSize: 40.0),
                     ),
                   ),
+                  decoration: BoxDecoration(color: Colors.grey[900]),
                 ),
                 ListTile(
-                  leading: Icon(Icons.home), title: Text("Home"),
+                  leading: Icon(Icons.home),
+                  title: Text("Home"),
                   onTap: () {
                     Navigator.pushReplacementNamed(context, '/home');
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.person), title: Text("About"),
+                  leading: Icon(Icons.person),
+                  title: Text("About"),
                   onTap: () {
                     Navigator.pushReplacementNamed(context, '/About');
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.settings), title: Text("Services"),
+                  leading: Icon(Icons.settings),
+                  title: Text("Services"),
                   onTap: () {
                     Navigator.pushReplacementNamed(context, '/Services');
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.contacts), title: Text("Contact Us"),
+                  leading: Icon(Icons.contacts),
+                  title: Text("Contact Us"),
                   onTap: () {
                     Navigator.pushReplacementNamed(context, '/Contact');
                   },
@@ -166,15 +59,21 @@ class Services extends StatelessWidget {
               ],
             ),
           ),
-          body: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
+        ),
+        body: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(4, 19, 0, 0),
+                      // padding: EdgeInsets.fromLTRB(4, 19, 0, 0),
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+
                       child: IconButton(
                         icon: Icon(Icons.menu),
                         onPressed: () {
@@ -183,15 +82,17 @@ class Services extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(12, 30, 15, 10),
+                      // padding: const EdgeInsets.fromLTRB(12, 30, 15, 10),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(context, "/");
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          MaterialStateProperty.all(Colors.grey[300]),
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              MaterialStateProperty.all(Colors.grey[300]),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -206,22 +107,26 @@ class Services extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "Home",
-                            style: TextStyle(fontSize: 14, color: Colors.grey[900]),
+                            style: TextStyle(
+                                fontSize: 14, color: Colors.grey[900]),
                           ),
                         ),
                       ),
                     ),
                     // About Button
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 30, 15, 10),
+                      // padding: const EdgeInsets.fromLTRB(0, 30, 15, 10),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(context, "/About");
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          MaterialStateProperty.all(Colors.grey[300]),
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              MaterialStateProperty.all(Colors.grey[300]),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -236,7 +141,8 @@ class Services extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "About",
-                            style: TextStyle(fontSize: 14, color: Colors.grey[900]),
+                            style: TextStyle(
+                                fontSize: 14, color: Colors.grey[900]),
                           ),
                         ),
                       ),
@@ -244,22 +150,25 @@ class Services extends StatelessWidget {
 
                     // Services Button
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 30, 15, 10),
+                      // padding: const EdgeInsets.fromLTRB(0, 30, 15, 10),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(context, "/Services");
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          // MaterialStateProperty.all(Colors.grey[300]),
-                          MaterialStateProperty.resolveWith<Color?>(
-                                (Set<MaterialState> states) {
+                              // MaterialStateProperty.all(Colors.grey[300]),
+                              MaterialStateProperty.resolveWith<Color?>(
+                            (Set<MaterialState> states) {
                               if (states.contains(MaterialState.pressed))
                                 return Colors.grey[300];
                               return Colors.amber[500];
                             },
                           ),
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -274,7 +183,8 @@ class Services extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "Services",
-                            style: TextStyle(fontSize: 14, color: Colors.grey[900]),
+                            style: TextStyle(
+                                fontSize: 14, color: Colors.grey[900]),
                           ),
                         ),
                       ),
@@ -282,15 +192,18 @@ class Services extends StatelessWidget {
 
                     // Contact Button
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 30, 15, 10),
+                      // padding: const EdgeInsets.fromLTRB(0, 30, 15, 10),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(context, "/Contact");
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          MaterialStateProperty.all(Colors.grey[300]),
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              MaterialStateProperty.all(Colors.grey[300]),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -305,7 +218,8 @@ class Services extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "Contact",
-                            style: TextStyle(fontSize: 14, color: Colors.grey[900]),
+                            style: TextStyle(
+                                fontSize: 14, color: Colors.grey[900]),
                           ),
                         ),
                       ),
@@ -313,102 +227,139 @@ class Services extends StatelessWidget {
                   ],
                 ),
               ),
-              Center(
-                child: Container(
-                  width: double.infinity,
-                  padding: EdgeInsets.all(15),
-                  margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.grey[300],
-                  ),
-                  child: Text(
-                    'Hire a Service',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        shadows: <Shadow>[
-                          // Shadow effect for text
-                          Shadow(
-                            offset: Offset(0.0, 2.2),
-                            blurRadius: 8,
-                            color: Color.fromARGB(200, 0, 0, 0),
-                          ),
-                        ],
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.amber[
-                        500]), // fontWeight: FontWeight.w700, color: Colors.grey[800]
-                  ),
+            ),
+            Center(
+              child: Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(15),
+                margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.grey[300],
+                ),
+                child: Text(
+                  'Hire a Service',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      shadows: <Shadow>[
+                        // Shadow effect for text
+                        Shadow(
+                          offset: Offset(0.0, 2.2),
+                          blurRadius: 8,
+                          color: Color.fromARGB(200, 0, 0, 0),
+                        ),
+                      ],
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.amber[
+                          500]), // fontWeight: FontWeight.w700, color: Colors.grey[800]
                 ),
               ),
-              GridView.count(
-                shrinkWrap: true,
-                primary: false,
-                padding: const EdgeInsets.all(30),
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 20,
-                crossAxisCount: 5,
-                childAspectRatio: 1,
-                children: <Widget>[
-                  Container(
-                    //padding: const EdgeInsets.all(8),
-                    //color: Colors.teal[100],
-                    child: ElevatedButton.icon(
-                      label: Text('Business plan Consultation', style: TextStyle(color: Colors.black),),
-                      icon: Icon(Icons.business, color: Colors.black,),
-                      onPressed: () {},
+            ),
+            GridView.count(
+              shrinkWrap: true,
+              primary: false,
+              padding: const EdgeInsets.all(30),
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              crossAxisCount: 5,
+              childAspectRatio: 1,
+              children: <Widget>[
+                Container(
+                  //padding: const EdgeInsets.all(8),
+                  //color: Colors.teal[100],
+                  child: ElevatedButton.icon(
+                    label: Text(
+                      'Business plan Consultation',
+                      style: TextStyle(color: Colors.black),
                     ),
-                  ),
-                  Container(
-                    //padding: const EdgeInsets.all(8),
-                    //color: Colors.teal[100],
-                    child: ElevatedButton.icon(
-                      label: Text('Internship', style: TextStyle(color: Colors.black),),
-                      icon: Icon(Icons.home_work, color: Colors.black,),
-                      onPressed: () {},
+                    icon: Icon(
+                      Icons.business,
+                      color: Colors.black,
                     ),
+                    onPressed: () {},
                   ),
-                  Container(
-                    //padding: const EdgeInsets.all(8),
-                    //color: Colors.teal[100],
-                    child: ElevatedButton.icon(
-                      label: Text('Workshops', style: TextStyle(color: Colors.black),),
-                      icon: Icon(Icons.screenshot_monitor, color: Colors.black,),
-                      onPressed: () {},
+                ),
+                Container(
+                  //padding: const EdgeInsets.all(8),
+                  //color: Colors.teal[100],
+                  child: ElevatedButton.icon(
+                    label: Text(
+                      'Internship',
+                      style: TextStyle(color: Colors.black),
                     ),
-                  ),
-                  Container(
-                    //padding: const EdgeInsets.all(8),
-                    //color: Colors.teal[100],
-                    child: ElevatedButton.icon(
-                      label: Text('Catering', style: TextStyle(color: Colors.black),),
-                      icon: Icon(Icons.restaurant, color: Colors.black,),
-                      onPressed: () {},
+                    icon: Icon(
+                      Icons.home_work,
+                      color: Colors.black,
                     ),
+                    onPressed: () {},
                   ),
-                  Container(
-                    //padding: const EdgeInsets.all(8),
-                    //color: Colors.teal[100],
-                    child: ElevatedButton.icon(
-                      label: Text('Event Management', style: TextStyle(color: Colors.black),),
-                      icon: Icon(Icons.event, color: Colors.black,),
-                      onPressed: () {},
+                ),
+                Container(
+                  //padding: const EdgeInsets.all(8),
+                  //color: Colors.teal[100],
+                  child: ElevatedButton.icon(
+                    label: Text(
+                      'Workshops',
+                      style: TextStyle(color: Colors.black),
                     ),
-                  ),
-                  Container(
-                    //padding: const EdgeInsets.all(8),
-                    //color: Colors.teal[100],
-                    child: ElevatedButton.icon(
-                      label: Text('Coaching', style: TextStyle(color: Colors.black),),
-                      icon: Icon(Icons.school, color: Colors.black,),
-                      onPressed: () {},
+                    icon: Icon(
+                      Icons.screenshot_monitor,
+                      color: Colors.black,
                     ),
+                    onPressed: () {},
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+                Container(
+                  //padding: const EdgeInsets.all(8),
+                  //color: Colors.teal[100],
+                  child: ElevatedButton.icon(
+                    label: Text(
+                      'Catering',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    icon: Icon(
+                      Icons.restaurant,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                Container(
+                  //padding: const EdgeInsets.all(8),
+                  //color: Colors.teal[100],
+                  child: ElevatedButton.icon(
+                    label: Text(
+                      'Event Management',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    icon: Icon(
+                      Icons.event,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                Container(
+                  //padding: const EdgeInsets.all(8),
+                  //color: Colors.teal[100],
+                  child: ElevatedButton.icon(
+                    label: Text(
+                      'Coaching',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    icon: Icon(
+                      Icons.school,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
+      ),
     );
   }
 }
