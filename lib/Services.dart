@@ -347,8 +347,8 @@ class Services extends StatelessWidget {
                 padding: const EdgeInsets.all(30),
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
-                crossAxisCount: 5,
-                childAspectRatio: 1,
+                crossAxisCount: 2,
+                childAspectRatio: 3.5,
                 children: <Widget>[
                   Container(
                     //padding: const EdgeInsets.all(8),
