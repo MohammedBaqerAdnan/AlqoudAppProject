@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Contact extends StatelessWidget {
   Contact({super.key});
@@ -90,9 +93,9 @@ class Contact extends StatelessWidget {
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          MaterialStateProperty.all(Colors.grey[300]),
+                              MaterialStateProperty.all(Colors.grey[300]),
                           shape:
-                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -123,9 +126,9 @@ class Contact extends StatelessWidget {
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          MaterialStateProperty.all(Colors.grey[300]),
+                              MaterialStateProperty.all(Colors.grey[300]),
                           shape:
-                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -158,9 +161,9 @@ class Contact extends StatelessWidget {
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          MaterialStateProperty.all(Colors.grey[300]),
+                              MaterialStateProperty.all(Colors.grey[300]),
                           shape:
-                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -192,16 +195,16 @@ class Contact extends StatelessWidget {
                         },
                         style: ButtonStyle(
                           backgroundColor:
-                          // MaterialStateProperty.all(Colors.grey[300]),
-                          MaterialStateProperty.resolveWith<Color?>(
-                                (Set<MaterialState> states) {
+                              // MaterialStateProperty.all(Colors.grey[300]),
+                              MaterialStateProperty.resolveWith<Color?>(
+                            (Set<MaterialState> states) {
                               if (states.contains(MaterialState.pressed))
                                 return Colors.grey[300];
                               return Colors.amber[500];
                             },
                           ),
                           shape:
-                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -230,7 +233,7 @@ class Contact extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 padding: EdgeInsets.all(15),
-                margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
+                margin: EdgeInsets.fromLTRB(20, 30, 20, 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.grey[300],
@@ -249,8 +252,7 @@ class Contact extends StatelessWidget {
                       ],
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
-                      color: Colors.amber[
-                      500]),
+                      color: Colors.amber[500]),
                 ),
               ),
             ),
@@ -258,175 +260,394 @@ class Contact extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Center(
                 child: Column(
-                    children: <Widget>[
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed email Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                          foregroundColor: Colors.black,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed email Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
                         ),
-                        icon: Icon(Icons.email,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid@alqoud.com"), //label text
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed phone Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                        padding: EdgeInsets.all(9),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 3),
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white),
+                        child: Icon(Icons.email, color: Colors.black, size: 24),
+                      ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid@alqoud.com",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
-                          foregroundColor: Colors.black,
                         ),
-                        icon: Icon(Icons.phone,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("+973 3300 6665"), //label text
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed phone Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed linkedin Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                        padding: EdgeInsets.all(9),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 3),
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white),
+                        child: Icon(Icons.phone, color: Colors.black, size: 24),
+                      ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "+973 3300 6665",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
-                          foregroundColor: Colors.black,
                         ),
-                        icon: Icon(Icons.link,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed youtube Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed linkedin Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
+                      ),
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // LinkedIn Icon
+                            'asset/linkedin.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
-                          foregroundColor: Colors.black,
                         ),
-                        icon: Icon(Icons.youtube_searched_for,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed YouTube Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed facebook Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // YouTube Icon
+                            'asset/youtube.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )
+                          // Icon(Icons.youtube_searched_for,
+                          //     color: Colors.black, size: 24),
                           ),
-                          foregroundColor: Colors.black,
-                        ),
-                        icon: Icon(Icons.facebook,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
-                      ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed twitter Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
-                          foregroundColor: Colors.black,
                         ),
-                        icon: Icon(Icons.abc,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed Facebook Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed instagram Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                        padding: EdgeInsets.all(9),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 3),
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white),
+                        child:
+                            Icon(Icons.facebook, color: Colors.black, size: 24),
+                      ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
-                          foregroundColor: Colors.black,
                         ),
-                        icon: Icon(Icons.camera_alt,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed Twitter Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
                       ),
-                    ],
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // Twitter Icon
+                            'asset/twitter.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )
+                          // Icon(Icons.access_alarms,
+                          //     color: Colors.black, size: 24),
+                          ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed Instagram Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
+                      ),
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // Instagram Icon
+                            'asset/Instagram.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )
+                          // Icon(Icons.camera_alt,
+                          //     color: Colors.black, size: 24),
+                          ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ), //label text
+                    ),
+                  ],
                 ),
               ),
             ),
-
             Center(
-              child: Row(
-                children: [
-                  Container(
-                    //width: double.infinity,
-                    padding: EdgeInsets.all(15),
-                    margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
+                child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                    margin: EdgeInsets.fromLTRB(10, 0, 10, 5),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[300],
                     ),
-                    child: Text(
-                      'Address\nOffice 225 & 226\nSeound Floor\n'
-                          'Al Farhan Center\nHamala, Bahrain',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.black,
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                        child: RichText(
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: 'Address \n',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.brown[500],
+                                ),
+                              ),
+                              TextSpan(
+                                text: '\n', // This will act as padding.
+                                style: TextStyle(
+                                  fontSize:
+                                      6, // You can adjust this value as required.
+                                ),
+                              ),
+                              TextSpan(
+                                text:
+                                    'Office 225 & 226\n Seound Floor\n Al Farhan Center\n Hamala, Bahrain\n',
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey[800],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                  Container(
-                    //width: double.infinity,
-                    padding: EdgeInsets.all(25),
-                    margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
+                ),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                    margin: EdgeInsets.fromLTRB(10, 0, 10, 5),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[300],
                     ),
-                    child: Text(
-                      'Business Hourse\nSunday to Thursday\n8:00 am - 4:00 pm\n'
-                          '(GMT+3)',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black,
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(6, 0, 0, 30),
+                        child: RichText(
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: 'Business Hours\n',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.brown[500],
+                                  //color to rgb(109, 109, 109)
+                                ),
+                              ),
+                              TextSpan(
+                                text: '\n', // This will act as padding.
+                                style: TextStyle(
+                                  fontSize:
+                                      6, // You can adjust this value as required.
+                                ),
+                              ),
+                              TextSpan(
+                                text:
+                                    'Sunday to Thursday\n 8:00 am - 4:00 pm\n (GMT+3)',
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey[800],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ],
-              ),
-            ),
-
+                ),
+              ],
+            )),
           ],
         ),
       ),
