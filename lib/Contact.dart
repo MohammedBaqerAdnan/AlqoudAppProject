@@ -264,6 +264,7 @@ class Contact extends StatelessWidget {
                           print("You pressed email Button");
                         },
                         style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.amber),
                           backgroundColor: Colors.grey[300],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -281,6 +282,7 @@ class Contact extends StatelessWidget {
                           print("You pressed phone Button");
                         },
                         style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.amber),
                           backgroundColor: Colors.grey[300],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -298,6 +300,7 @@ class Contact extends StatelessWidget {
                           print("You pressed linkedin Button");
                         },
                         style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.amber),
                           backgroundColor: Colors.grey[300],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -315,6 +318,7 @@ class Contact extends StatelessWidget {
                           print("You pressed youtube Button");
                         },
                         style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.amber),
                           backgroundColor: Colors.grey[300],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -332,6 +336,7 @@ class Contact extends StatelessWidget {
                           print("You pressed facebook Button");
                         },
                         style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.amber),
                           backgroundColor: Colors.grey[300],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -349,6 +354,7 @@ class Contact extends StatelessWidget {
                           print("You pressed twitter Button");
                         },
                         style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.amber),
                           backgroundColor: Colors.grey[300],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
@@ -366,6 +372,7 @@ class Contact extends StatelessWidget {
                           print("You pressed instagram Button");
                         },
                         style: ElevatedButton.styleFrom(
+                          side: BorderSide(color: Colors.amber),
                             backgroundColor: Colors.grey[300],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
