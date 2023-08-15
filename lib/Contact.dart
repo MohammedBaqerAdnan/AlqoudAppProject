@@ -250,100 +250,176 @@ class Contact extends StatelessWidget {
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: Colors.amber[
-                      500]), // fontWeight: FontWeight.w700, color: Colors.grey[800]
+                      500]),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height:
-                      34, // change the height here to match the size of the icon
-                      width: 34, // change the width
-                      alignment:
-                      Alignment.center, // center the icon in the container
-                      child: IconButton(
-                        padding: EdgeInsets.all(0),
-                        icon: Icon(
-                          Icons.facebook,
-                          size: 32,
-                          color: Colors.blue,
+                child: Column(
+                    children: <Widget>[
+                      ElevatedButton.icon(
+                        onPressed: (){
+                          print("You pressed email Button");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          foregroundColor: Colors.black,
                         ),
-                        onPressed: () {},
+                        icon: Icon(Icons.email,
+                          color: Colors.black,
+                        ),  //icon data for elevated button
+                        label: Text("Khalid@alqoud.com"), //label text
                       ),
-                    ),
-                    SizedBox(width: 10), // for some spacing
-                    Container(
-                      height:
-                      34, // Let's make this height same as Facebook icon's container height for alignment
-                      width: 34, // Same width for consistency
-                      child: IconButton(
-                        padding: EdgeInsets.all(0),
-                        icon: SvgPicture.asset('linkedin.svg',
-                            height: 24, width: 24, color: Colors.blue),
-                        onPressed: () {},
+                      SizedBox(height: 8.0,),
+                      ElevatedButton.icon(
+                        onPressed: (){
+                          print("You pressed phone Button");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          foregroundColor: Colors.black,
+                        ),
+                        icon: Icon(Icons.phone,
+                          color: Colors.black,
+                        ),  //icon data for elevated button
+                        label: Text("+973 3300 6665"), //label text
                       ),
-                    ),
-                    SizedBox(width: 10), // for some spacing
-                    Container(
-                      height: 34, // Same as others
-                      width: 34, // Same as others
-                      child: IconButton(
-                        padding: EdgeInsets.all(0),
-                        icon: SvgPicture.asset('twitter.svg',
-                            height: 24, width: 24, color: Colors.blue),
-                        onPressed: () {},
+                      SizedBox(height: 8.0,),
+                      ElevatedButton.icon(
+                        onPressed: (){
+                          print("You pressed linkedin Button");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          foregroundColor: Colors.black,
+                        ),
+                        icon: Icon(Icons.link,
+                          color: Colors.black,
+                        ),  //icon data for elevated button
+                        label: Text("Khalid AlQoud"), //label text
                       ),
-                    )
-                  ],
+                      SizedBox(height: 8.0,),
+                      ElevatedButton.icon(
+                        onPressed: (){
+                          print("You pressed youtube Button");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          foregroundColor: Colors.black,
+                        ),
+                        icon: Icon(Icons.youtube_searched_for,
+                          color: Colors.black,
+                        ),  //icon data for elevated button
+                        label: Text("Khalid AlQoud"), //label text
+                      ),
+                      SizedBox(height: 8.0,),
+                      ElevatedButton.icon(
+                        onPressed: (){
+                          print("You pressed facebook Button");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          foregroundColor: Colors.black,
+                        ),
+                        icon: Icon(Icons.facebook,
+                          color: Colors.black,
+                        ),  //icon data for elevated button
+                        label: Text("Khalid AlQoud"), //label text
+                      ),
+                      SizedBox(height: 8.0,),
+                      ElevatedButton.icon(
+                        onPressed: (){
+                          print("You pressed twitter Button");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          foregroundColor: Colors.black,
+                        ),
+                        icon: Icon(Icons.abc,
+                          color: Colors.black,
+                        ),  //icon data for elevated button
+                        label: Text("Khalid AlQoud"), //label text
+                      ),
+                      SizedBox(height: 8.0,),
+                      ElevatedButton.icon(
+                        onPressed: (){
+                          print("You pressed instagram Button");
+                        },
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey[300],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          foregroundColor: Colors.black,
+                        ),
+                        icon: Icon(Icons.camera_alt,
+                          color: Colors.black,
+                        ),  //icon data for elevated button
+                        label: Text("Khalid AlQoud"), //label text
+                      ),
+                    ],
                 ),
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0),
-              child: Column(
-                children: <Widget>[
-                  SizedBox(height: 16.0,),
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[300],
-                      hintText: 'Name',
-                      border: InputBorder.none,
+            Center(
+              child: Row(
+                children: [
+                  Container(
+                    //width: double.infinity,
+                    padding: EdgeInsets.all(15),
+                    margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.grey[300],
                     ),
-                  ),
-                  SizedBox(height: 8.0,),
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[300],
-                      hintText: 'Email',
-                      border: InputBorder.none,
-                    ),
-                  ),
-                  SizedBox(height: 8.0,),
-                  TextField(
-                    maxLines: 7,
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[300],
-                      hintText: 'Message',
-                      border: InputBorder.none,
-                    ),
-                  ),
-                  SizedBox(height: 8.0,),
-                  MaterialButton(
-                    color: Colors.grey,
-                      onPressed: () {},
-                    child: Text('SUBMIT',
+                    child: Text(
+                      'Address\nOffice 225 & 226\nSeound Floor\n'
+                          'Al Farhan Center\nHamala, Bahrain',
+                      textAlign: TextAlign.left,
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    //width: double.infinity,
+                    padding: EdgeInsets.all(25),
+                    margin: EdgeInsets.fromLTRB(20, 30, 20, 20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.grey[300],
+                    ),
+                    child: Text(
+                      'Business Hourse\nSunday to Thursday\n8:00 am - 4:00 pm\n'
+                          '(GMT+3)',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black,
                       ),
                     ),
                   ),
