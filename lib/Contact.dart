@@ -260,107 +260,290 @@ class Contact extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Center(
                 child: Column(
-                    children: <Widget>[
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed email Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                        ),
-                        icon: Icon(Icons.email,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid@alqoud.com"), //label text
-                      ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed phone Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed email Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
                         ),
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed linkedin Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                        padding: EdgeInsets.all(9),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 3),
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white),
+                        child: Icon(Icons.email, color: Colors.black, size: 24),
+                      ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid@alqoud.com",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                         ),
-                        icon: Icon(Icons.link,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed phone Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed youtube Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                        padding: EdgeInsets.all(9),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 3),
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white),
+                        child: Icon(Icons.phone, color: Colors.black, size: 24),
+                      ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "+973 3300 6665",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                         ),
-                        icon: Icon(Icons.youtube_searched_for,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed facebook Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed linkedin Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
+                      ),
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // LinkedIn Icon
+                            'asset/linkedin.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                         ),
-                        icon: Icon(Icons.facebook,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed YouTube Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed twitter Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // YouTube Icon
+                            'asset/youtube.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )
+                          // Icon(Icons.youtube_searched_for,
+                          //     color: Colors.black, size: 24),
+                          ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                         ),
-                        icon: Icon(Icons.abc,
-                          color: Colors.black,
-                        ),  //icon data for elevated button
-                        label: Text("Khalid AlQoud"), //label text
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed Facebook Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
                       ),
-                      SizedBox(height: 8.0,),
-                      ElevatedButton.icon(
-                        onPressed: (){
-                          print("You pressed instagram Button");
-                        },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey[300],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                      icon: Container(
+                        padding: EdgeInsets.all(9),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 3),
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.white),
+                        child:
+                            Icon(Icons.facebook, color: Colors.black, size: 24),
+                      ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed Twitter Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
+                      ),
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // Twitter Icon
+                            'asset/twitter.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )
+                          // Icon(Icons.access_alarms,
+                          //     color: Colors.black, size: 24),
+                          ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ), //label text
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        print("You pressed Instagram Button");
+                      },
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(color: Colors.amber, width: 1),
+                        alignment: Alignment.centerLeft,
+                        minimumSize: Size(double.infinity, 50),
+                        padding: EdgeInsets.all(0),
+                        backgroundColor: Colors.grey[300],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        primary: Colors.grey[300],
+                      ),
+                      icon: Container(
+                          padding: EdgeInsets.all(9),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black, width: 3),
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white),
+                          child: Image.asset(
+                            // Instagram Icon
+                            'asset/Instagram.png',
+                            width: 24,
+                            height: 24,
+                            fit: BoxFit.cover,
+                          )
+                          // Icon(Icons.camera_alt,
+                          //     color: Colors.black, size: 24),
+                          ),
+                      label: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          "Khalid AlQoud",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                         ),
                       ), //label text
