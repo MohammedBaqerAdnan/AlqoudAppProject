@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+
 
 class BookingForm extends StatelessWidget {
   BookingForm({Key? key}) : super(key: key);
@@ -293,32 +295,37 @@ class BookingForm extends StatelessWidget {
           SizedBox(
             height: 10.0,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: ElevatedButton(
-              onPressed: () {
-                // Validate returns true if the form is valid, or false otherwise.
-                if (_formKey.currentState!.validate()) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Processing Data')),
-                  );
-                }
-              },
-              style: ButtonStyle(
-                backgroundColor:
-                MaterialStateProperty.all(Colors.amber[300]),
-                shape:
-                MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+
+          Column(
+            children: <Widget>[
+            IntlPhoneField(
+              decoration: InputDecoration(
+                labelText: 'Phone Number',
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.lightBlueAccent,
+                    width: 2,
                   ),
                 ),
-                elevation: MaterialStateProperty.all(10),
-                padding: MaterialStateProperty.all(
-                    EdgeInsets.fromLTRB(0, 0, 0, 0)),
               ),
-              child: const Text('Submit'),
+              initialCountryCode: 'NP',
+              onChanged: (phone) {
+
+                print(phone.completeNumber);
+                print(phone.countryCode);
+                print(phone.number);
+              },
             ),
+
+            Container(
+              margin: EdgeInsets.only(top: 20.0),
+              child:SizedBox(
+                child:ElevatedButton(
+                  onPressed: () {},
+                  child: Text("Submit"),
+                ),
+              ),
+            )
+          ],
           ),
         ],
       ),
