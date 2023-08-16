@@ -364,7 +364,7 @@ class Contact extends StatelessWidget {
                               color: Colors.white),
                           child: Image.asset(
                             // LinkedIn Icon
-                            'linkedin.png',
+                            'asset/linkedin.png',
                             width: 24,
                             height: 24,
                             fit: BoxFit.cover,
@@ -406,7 +406,7 @@ class Contact extends StatelessWidget {
                               color: Colors.white),
                           child: Image.asset(
                             // YouTube Icon
-                            'youtube.png',
+                            'asset/youtube.png',
                             width: 24,
                             height: 24,
                             fit: BoxFit.cover,
@@ -489,7 +489,7 @@ class Contact extends StatelessWidget {
                               color: Colors.white),
                           child: Image.asset(
                             // Twitter Icon
-                            'twitter.png',
+                            'asset/twitter.png',
                             width: 24,
                             height: 24,
                             fit: BoxFit.cover,
@@ -534,7 +534,7 @@ class Contact extends StatelessWidget {
                               color: Colors.white),
                           child: Image.asset(
                             // Instagram Icon
-                            'Instagram.png',
+                            'asset/Instagram.png',
                             width: 24,
                             height: 24,
                             fit: BoxFit.cover,
