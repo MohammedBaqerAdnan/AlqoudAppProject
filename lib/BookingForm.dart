@@ -6,12 +6,11 @@ class BookingForm extends StatelessWidget {
   BookingForm({Key? key}) : super(key: key);
 
   final _formKey = GlobalKey<FormState>();
-  final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
-      key: _formKey,
-      //key: _globalKey,
+      key: _sKey,
       drawer: Drawer(
         child: Container(
           color: Colors.grey[300],
@@ -64,6 +63,7 @@ class BookingForm extends StatelessWidget {
         ),
       ),
       body: Column(
+        key: _formKey,
         children: <Widget>[
           Container(
             child: Padding(
@@ -77,7 +77,7 @@ class BookingForm extends StatelessWidget {
                     child: IconButton(
                       icon: Icon(Icons.menu),
                       onPressed: () {
-                        _globalKey.currentState?.openDrawer();
+                        _sKey.currentState?.openDrawer();
                       },
                     ),
                   ),
@@ -307,7 +307,7 @@ class BookingForm extends StatelessWidget {
                   ),
                 ),
               ),
-              initialCountryCode: 'NP',
+              initialCountryCode: 'BH',
               onChanged: (phone) {
 
                 print(phone.completeNumber);
