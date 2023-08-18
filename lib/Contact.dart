@@ -95,7 +95,7 @@ class Contact extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -128,7 +128,7 @@ class Contact extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -164,7 +164,7 @@ class Contact extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -198,9 +198,9 @@ class Contact extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                // MaterialStateProperty.all(Colors.grey[300]),
-                                MaterialStateProperty.resolveWith<Color?>(
-                              (Set<MaterialState> states) {
+                            // MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.resolveWith<Color?>(
+                                  (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed))
                                   return Colors.grey[300];
                                 return Colors.amber[500];
@@ -291,7 +291,7 @@ class Contact extends StatelessWidget {
                               borderRadius: BorderRadius.circular(50),
                               color: Colors.white),
                           child:
-                              Icon(Icons.email, color: Colors.black, size: 24),
+                          Icon(Icons.email, color: Colors.black, size: 24),
                         ),
                         label: Padding(
                           padding: const EdgeInsets.only(left: 10),
@@ -308,7 +308,11 @@ class Contact extends StatelessWidget {
                         height: 20.0,
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {
+                        onPressed: () async {
+                          await launchUrl(Uri(
+                            scheme: 'tel',
+                            path: '+973 3300 6665',
+                          ));
                           print("You pressed phone Button");
                         },
                         style: ElevatedButton.styleFrom(
@@ -329,7 +333,7 @@ class Contact extends StatelessWidget {
                               borderRadius: BorderRadius.circular(50),
                               color: Colors.white),
                           child:
-                              Icon(Icons.phone, color: Colors.black, size: 24),
+                          Icon(Icons.phone, color: Colors.black, size: 24),
                         ),
                         label: Padding(
                           padding: const EdgeInsets.only(left: 10),
@@ -346,7 +350,11 @@ class Contact extends StatelessWidget {
                         height: 20.0,
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {
+                        onPressed: () async {
+                          await launchUrl(Uri(
+                            scheme: 'https',
+                            path: 'linkedin.com/in/khalid-alqoud-87596514/?originalSubdomain=bh',
+                          ));
                           print("You pressed linkedin Button");
                         },
                         style: ElevatedButton.styleFrom(
@@ -364,7 +372,7 @@ class Contact extends StatelessWidget {
                             padding: EdgeInsets.all(9),
                             decoration: BoxDecoration(
                                 border:
-                                    Border.all(color: Colors.black, width: 3),
+                                Border.all(color: Colors.black, width: 3),
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.white),
                             child: Image.asset(
@@ -389,7 +397,11 @@ class Contact extends StatelessWidget {
                         height: 20.0,
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {
+                        onPressed: () async {
+                          await launchUrl(Uri(
+                            scheme: 'https',
+                            path: 'youtube.com/channel/UCgCeL0_MVFxbyzsf1drZhZw',
+                          ));
                           print("You pressed YouTube Button");
                         },
                         style: ElevatedButton.styleFrom(
@@ -407,7 +419,7 @@ class Contact extends StatelessWidget {
                             padding: EdgeInsets.all(9),
                             decoration: BoxDecoration(
                                 border:
-                                    Border.all(color: Colors.black, width: 3),
+                                Border.all(color: Colors.black, width: 3),
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.white),
                             child: Image.asset(
@@ -417,9 +429,9 @@ class Contact extends StatelessWidget {
                               height: 24,
                               fit: BoxFit.cover,
                             )
-                            // Icon(Icons.youtube_searched_for,
-                            //     color: Colors.black, size: 24),
-                            ),
+                          // Icon(Icons.youtube_searched_for,
+                          //     color: Colors.black, size: 24),
+                        ),
                         label: Padding(
                           padding: const EdgeInsets.only(left: 10),
                           child: Text(
@@ -435,7 +447,11 @@ class Contact extends StatelessWidget {
                         height: 20.0,
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {
+                        onPressed: () async {
+                          await launchUrl(Uri(
+                            scheme: 'https',
+                            path: 'facebook.com/khalid.alqoud',
+                          ));
                           print("You pressed Facebook Button");
                         },
                         style: ElevatedButton.styleFrom(
@@ -473,7 +489,11 @@ class Contact extends StatelessWidget {
                         height: 20.0,
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {
+                        onPressed: () async {
+                          await launchUrl(Uri(
+                            scheme: 'https',
+                            path: 'twitter.com/KhalidAlQoud',
+                          ));
                           print("You pressed Twitter Button");
                         },
                         style: ElevatedButton.styleFrom(
@@ -491,7 +511,7 @@ class Contact extends StatelessWidget {
                             padding: EdgeInsets.all(9),
                             decoration: BoxDecoration(
                                 border:
-                                    Border.all(color: Colors.black, width: 3),
+                                Border.all(color: Colors.black, width: 3),
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.white),
                             child: Image.asset(
@@ -501,9 +521,9 @@ class Contact extends StatelessWidget {
                               height: 24,
                               fit: BoxFit.cover,
                             )
-                            // Icon(Icons.access_alarms,
-                            //     color: Colors.black, size: 24),
-                            ),
+                          // Icon(Icons.access_alarms,
+                          //     color: Colors.black, size: 24),
+                        ),
                         label: Padding(
                           padding: const EdgeInsets.only(left: 10),
                           child: Text(
@@ -519,7 +539,11 @@ class Contact extends StatelessWidget {
                         height: 20.0,
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {
+                        onPressed: () async {
+                          await launchUrl(Uri(
+                            scheme: 'https',
+                            path: 'instagram.com/khalidalqoud/',
+                          ));
                           print("You pressed Instagram Button");
                         },
                         style: ElevatedButton.styleFrom(
@@ -537,7 +561,7 @@ class Contact extends StatelessWidget {
                             padding: EdgeInsets.all(9),
                             decoration: BoxDecoration(
                                 border:
-                                    Border.all(color: Colors.black, width: 3),
+                                Border.all(color: Colors.black, width: 3),
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.white),
                             child: Image.asset(
@@ -547,9 +571,9 @@ class Contact extends StatelessWidget {
                               height: 24,
                               fit: BoxFit.cover,
                             )
-                            // Icon(Icons.camera_alt,
-                            //     color: Colors.black, size: 24),
-                            ),
+                          // Icon(Icons.camera_alt,
+                          //     color: Colors.black, size: 24),
+                        ),
                         label: Padding(
                           padding: const EdgeInsets.only(left: 10),
                           child: Text(
@@ -567,100 +591,100 @@ class Contact extends StatelessWidget {
               ),
               Center(
                   child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                      margin: EdgeInsets.fromLTRB(10, 0, 10, 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey[300],
-                      ),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
-                          child: RichText(
-                            text: TextSpan(
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: 'Address \n',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.brown[500],
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: '\n', // This will act as padding.
-                                  style: TextStyle(
-                                    fontSize:
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                          margin: EdgeInsets.fromLTRB(10, 0, 10, 5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey[300],
+                          ),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(6, 0, 0, 0),
+                              child: RichText(
+                                text: TextSpan(
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                      text: 'Address \n',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.brown[500],
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: '\n', // This will act as padding.
+                                      style: TextStyle(
+                                        fontSize:
                                         6, // You can adjust this value as required.
-                                  ),
-                                ),
-                                TextSpan(
-                                  text:
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text:
                                       'Office 225 & 226\n Seound Floor\n Al Farhan Center\n Hamala, Bahrain\n',
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: Colors.grey[800],
-                                  ),
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.grey[800],
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                      margin: EdgeInsets.fromLTRB(10, 0, 10, 5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey[300],
-                      ),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(6, 0, 0, 30),
-                          child: RichText(
-                            text: TextSpan(
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: 'Business Hours\n',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.brown[500],
-                                    //color to rgb(109, 109, 109)
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: '\n', // This will act as padding.
-                                  style: TextStyle(
-                                    fontSize:
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                          margin: EdgeInsets.fromLTRB(10, 0, 10, 5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey[300],
+                          ),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(6, 0, 0, 30),
+                              child: RichText(
+                                text: TextSpan(
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                      text: 'Business Hours\n',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.brown[500],
+                                        //color to rgb(109, 109, 109)
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: '\n', // This will act as padding.
+                                      style: TextStyle(
+                                        fontSize:
                                         6, // You can adjust this value as required.
-                                  ),
-                                ),
-                                TextSpan(
-                                  text:
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text:
                                       'Sunday to Thursday\n 8:00 am - 4:00 pm\n (GMT+3)',
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: Colors.grey[800],
-                                  ),
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.grey[800],
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                ],
-              )),
+                    ],
+                  )),
             ],
           ),
         ),
