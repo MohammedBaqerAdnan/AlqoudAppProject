@@ -303,67 +303,84 @@ class About extends StatelessWidget {
             // Expanded(
             //   child: SizedBox(), // This will fill remaining space
             // ),
-            SizedBox(height: 10),
             Container(
               decoration: BoxDecoration(
-                color: Colors.grey[300],
                 borderRadius: BorderRadius.circular(20),
               ),
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              child: Column(
+              child: Row(
                 children: [
-                  Text(
-                    '© 2023 AlQoud Foundation',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey[800],
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.amber[500], // Different color as required
+                        borderRadius:
+                            BorderRadius.circular(15), // Rounded corners
+                      ),
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Speaker Profile', // Changed text
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.grey[800],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  SizedBox(height: 10), // Provide some vertical spacing
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height:
-                            34, // change the height here to match the size of the icon
-                        width: 34, // change the width
-                        alignment: Alignment
-                            .center, // center the icon in the container
-                        child: IconButton(
-                          padding: EdgeInsets.all(0),
-                          icon: Icon(
-                            Icons.facebook,
-                            size: 32,
-                            color: Colors.blue,
+                  SizedBox(width: 10), // For spacing between containers
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          // Increased height and width
+                          height: 35,
+                          width: 200,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[300], // Background color
+                            borderRadius:
+                                BorderRadius.circular(15), // Rounded corners
                           ),
-                          onPressed: () {},
+                          padding: EdgeInsets.all(
+                              10.0), // Padding for non-attachment
+                          child: Text(
+                            'Speaker Arabic CV', // Changed text
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey[800],
+                            ),
+                          ),
                         ),
-                      ),
-                      SizedBox(width: 10), // for some spacing
-                      Container(
-                        height:
-                            34, // Let's make this height same as Facebook icon's container height for alignment
-                        width: 34, // Same width for consistency
-                        child: IconButton(
-                          padding: EdgeInsets.all(0),
-                          icon: SvgPicture.asset('asset/linkedin.svg',
-                              height: 24, width: 24, color: Colors.blue),
-                          onPressed: () {},
+                        SizedBox(height: 10),
+                        Container(
+                          // Increased height and width
+                          height: 35,
+                          width: 200,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[300], // Background color
+                            borderRadius:
+                                BorderRadius.circular(15), // Rounded corners
+                          ),
+                          padding: EdgeInsets.all(
+                              10.0), // Padding for non-attachment
+                          child: Text(
+                            'Speaker English CV', // Changed text
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey[800],
+                            ),
+                          ),
                         ),
-                      ),
-                      SizedBox(width: 10), // for some spacing
-                      Container(
-                        height: 34, // Same as others
-                        width: 34, // Same as others
-                        child: IconButton(
-                          padding: EdgeInsets.all(0),
-                          icon: SvgPicture.asset('asset/twitter.svg',
-                              height: 24, width: 24, color: Colors.blue),
-                          onPressed: () {},
-                        ),
-                      )
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
