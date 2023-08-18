@@ -5,7 +5,7 @@ import 'package:flutter_alqoud/Contact.dart';
 import 'package:flutter_alqoud/Home.dart';
 import 'package:flutter_alqoud/Services.dart';
 import 'package:flutter_alqoud/About.dart';
-// import 'package:flutter_alqoud/BookingForm.dart';
+import 'package:flutter_alqoud/BookingForm.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         "/Services": (context) => Services(),
         "/About": (context) => About(),
         "/Contact": (context) => Contact(),
-        // "/BookingForm": (context) => BookingForm(),
+        "/BookingForm": (context) => BookingForm(),
       },
     );
   }
