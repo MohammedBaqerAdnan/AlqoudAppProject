@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:flutter_svg/flutter_svg.dart';
 
 class About extends StatelessWidget {
@@ -234,13 +235,13 @@ class About extends StatelessWidget {
             // ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-              height: 275,
+              height: 295,
               width: 210,
               child: ClipRRect(
                 //Rounds the corners of the image
                 borderRadius: BorderRadius.circular(20.0),
                 child: Image.asset(
-                  'asset/pic2.jpg',
+                  'asset/MrKhalid.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
