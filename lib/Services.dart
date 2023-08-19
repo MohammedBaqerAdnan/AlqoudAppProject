@@ -90,7 +90,7 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -123,7 +123,7 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -159,9 +159,9 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                // MaterialStateProperty.all(Colors.grey[300]),
-                                MaterialStateProperty.resolveWith<Color?>(
-                              (Set<MaterialState> states) {
+                            // MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.resolveWith<Color?>(
+                                  (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed))
                                   return Colors.grey[300];
                                 return Colors.amber[500];
@@ -200,7 +200,7 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.grey[300]),
+                            MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -251,7 +251,7 @@ class Services extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
                         color: Colors.amber[
-                            500]), // fontWeight: FontWeight.w700, color: Colors.grey[800]
+                        500]), // fontWeight: FontWeight.w700, color: Colors.grey[800]
                   ),
                 ),
               ),
@@ -268,11 +268,12 @@ class Services extends StatelessWidget {
                           MouseRegion(
                             cursor: SystemMouseCursors.click,
                             //child: ElevatedButton(
-                              //onPressed: (){
-                                //Navigator.pushReplacementNamed(context, "/BusinessPlanConsultService");
-                              //}
+                            //onPressed: (){
+                            //Navigator.pushReplacementNamed(context, "/BusinessPlanConsultService");
+                            //}
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.pushReplacementNamed(context, "/BusinessPlanConsultService");
                                 print('Business Plan tapped!');
                               },
                               child: Container(
@@ -306,6 +307,7 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.pushReplacementNamed(context, "/InternshipService");
                                 print('Internship tapped!');
                               },
                               child: Container(
@@ -337,6 +339,7 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
+                                //Navigator.pushReplacementNamed(context, "/Workshops");
                                 print('Workshops tapped!');
                               },
                               child: Container(
@@ -368,6 +371,7 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.pushReplacementNamed(context, "/CateringService");
                                 print('Catering tapped!');
                               },
                               child: Container(
@@ -401,6 +405,7 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.pushReplacementNamed(context, "/EventManagementService");
                                 print('Event Management tapped!');
                               },
                               child: Container(
@@ -432,6 +437,7 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.pushReplacementNamed(context, "/CoachingService");
                                 print('Coaching tapped!');
                               },
                               child: Container(
