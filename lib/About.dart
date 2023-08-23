@@ -311,9 +311,42 @@ class About extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
+                children: <Widget>[
+                  Column(
+                    children: [
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacementNamed(
+                                context, "/SpeakerProfile");
+                            print('Speaker Profile tapped!');
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors
+                                  .amber[500], // Different color as required
+                              borderRadius:
+                                  BorderRadius.circular(15), // Rounded corners
+                            ),
+                            padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Speaker Profile', // Changed text
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey[800],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                    /*child: Container(
                       decoration: BoxDecoration(
                         color: Colors.amber[500], // Different color as required
                         borderRadius:
@@ -332,14 +365,44 @@ class About extends StatelessWidget {
                           ),
                         ],
                       ),
-                    ),
+                    ),*/
                   ),
                   SizedBox(width: 10), // For spacing between containers
                   Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
+                      children: <Widget>[
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pushReplacementNamed(
+                                  context, "/BusinessPlanConsultService");
+                              print('Business Plan tapped!');
+                            },
+                            child: Container(
+                              // Increased height and width
+                              height: 35,
+                              width: 200,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: Colors.grey[300], // Background color
+                                borderRadius: BorderRadius.circular(
+                                    15), // Rounded corners
+                              ),
+                              padding: EdgeInsets.all(
+                                  10.0), // Padding for non-attachment
+                              child: Text(
+                                'Speaker Arabic CV', // Changed text
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.grey[800],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        /*Container(
                           // Increased height and width
                           height: 35,
                           width: 200,
@@ -358,9 +421,39 @@ class About extends StatelessWidget {
                               color: Colors.grey[800],
                             ),
                           ),
-                        ),
+                        ),*/
                         SizedBox(height: 10),
-                        Container(
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pushReplacementNamed(
+                                  context, "/BusinessPlanConsultService");
+                              print('Business Plan tapped!');
+                            },
+                            child: Container(
+                              // Increased height and width
+                              height: 35,
+                              width: 200,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: Colors.grey[300], // Background color
+                                borderRadius: BorderRadius.circular(
+                                    15), // Rounded corners
+                              ),
+                              padding: EdgeInsets.all(
+                                  10.0), // Padding for non-attachment
+                              child: Text(
+                                'Speaker English CV', // Changed text
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.grey[800],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        /*Container(
                           // Increased height and width
                           height: 35,
                           width: 200,
@@ -379,7 +472,7 @@ class About extends StatelessWidget {
                               color: Colors.grey[800],
                             ),
                           ),
-                        ),
+                        ),*/
                       ],
                     ),
                   ),
