@@ -11,6 +11,7 @@ import 'package:qfapp/pages/CateringService.dart';
 import 'package:qfapp/pages/CoachingService.dart';
 import 'package:qfapp/pages/EventManagementService.dart';
 import 'package:qfapp/pages/InternshipService.dart';
+import 'package:qfapp/pages/Workshops.dart';
 
 void main() {
       runApp(const MyApp());
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
                         "/CoachingService": (context) => CoachingService(),
                         "/EventManagementService": (context) => EventManagementService(),
                         "/InternshipService": (context) => InternshipService(),
+                        "/Workshops": (context) => Workshops(),
                   },
             );
       }
