@@ -339,7 +339,7 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
-                                //Navigator.pushReplacementNamed(context, "/Workshops");
+                                Navigator.pushReplacementNamed(context, "/Workshops");
                                 print('Workshops tapped!');
                               },
                               child: Container(
