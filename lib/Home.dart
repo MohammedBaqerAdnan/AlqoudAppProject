@@ -67,16 +67,26 @@ class Home extends StatelessWidget {
         children: [
           Column(
             children: [
-              Expanded(
-                child: Image.asset(
-                  'asset/pic1.jpg',
-                  fit: BoxFit.cover,
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                height: 385,
+                width: 395,
+                child: ClipRRect(
+                  child: Image.asset(
+                    'asset/AlQoudLogo.jpg',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-              Expanded(
-                child: Image.asset(
-                  'asset/pic2.jpg',
-                  fit: BoxFit.cover,
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                height: 364,
+                width: 393,
+                child: ClipRRect(
+                  child: Image.asset(
+                    'asset/KhalidAlQoud.jpg',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ],
@@ -87,8 +97,8 @@ class Home extends StatelessWidget {
             bottom: 0,
             child: Container(
               width: 60,
-              height: 120,
-              padding: EdgeInsets.all(25),
+              height: 90,
+              padding: EdgeInsets.all(12),
               margin: EdgeInsets.fromLTRB(40, 20, 40, 20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
