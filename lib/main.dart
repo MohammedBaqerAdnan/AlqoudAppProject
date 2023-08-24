@@ -13,6 +13,8 @@ import 'package:flutter_alqoud/EventManagementService.dart';
 import 'package:flutter_alqoud/InternshipService.dart';
 import 'package:flutter_alqoud/Workshops.dart';
 import 'package:flutter_alqoud/SpeakerProfile.dart';
+import 'package:flutter_alqoud/EnglishCV.dart';
+import 'package:flutter_alqoud/ArabicCV.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +42,8 @@ class MyApp extends StatelessWidget {
         "/InternshipService": (context) => InternshipService(),
         "/Workshops": (context) => Workshops(),
         "/SpeakerProfile": (context) => SpeakerProfile(),
+        "/EnglishCV": (context) => EnglishCV(),
+        "/ArabicCV": (context) => ArabicCV(),
       },
     );
   }
