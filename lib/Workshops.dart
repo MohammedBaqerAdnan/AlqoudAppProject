@@ -275,41 +275,20 @@ class Workshops extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
               child: Text(
-                '''1- Corporate
-                    Khalid focuses on the critical core required to succeed in today's business environment;
-                  from conflict solving to time management skills. The corporate workshops that are
-                  conducted by Khalid focus on improving productivity and enhance the quality
-                  standards. During the workshops, delegates develop skills sets that allow them to carry
-                  out greater variety of work. Delegates also learn to improve their ability to implement
-                  and realize goals outlined in a company's business plan. These workshops improve
-                  competitiveness co-workers, profitability, customer satisfaction, corporate reputation
-                  and profile. When the employees benefit from Khalid's workshops, it helps reduce
-                  inefficient use of time and materials, staff turnover and absenteeism, and recruitment
-                  expenses.''',
-                // Style for the first paragraph
+                '1- Corporate Khalid focuses on the critical core required to succeed in today\'s business environment; from conflict solving to time management skills. The corporate workshops that are conducted by Khalid focus on improving productivity and enhance the quality standards. During the workshops, delegates develop skills sets that allow them to carry out greater variety of work. Delegates also learn to improve their ability to implement and realize goals outlined in a company\'s business plan. These workshops improve competitiveness co-workers, profitability, customer satisfaction, corporate reputation and profile. When the employees benefit from Khalid\'s workshops, it helps reduce inefficient use of time and materials, staff turnover and absenteeism, and recruitment expenses.',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.grey[800],
-                  wordSpacing: 1,
-                ),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.grey[800],
+                    wordSpacing: 1),
                 textAlign: TextAlign.start,
               ),
             ),
+
             Container(
               margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
               child: Text(
-                '''2- Family Businesses
-                    Through family business workshops, you will learn to differentiate the roles and
-                    responsibilities of owners, family members (whether involved in management or not),
-                    independent directors and executives. Khalid aims - through family business workshops to
-                    educate people on how to develop new governance and leadership mindsets and gain
-                    confidence in their ability to apply them in practice. In the workshop he conducts, he
-                    encourages the growth and profitability of the family business to reach its true potential.
-                    Khalid believes that every family business is unique and complex in its own way, therefore
-                    he has to understand the family dynamic in which he working with in order to conduct a
-                    tailor made workshop that will enable them to understand and accomplish goals.''',
-                // Style for the second paragraph
+                '2- Family Businesses Through family business workshops, you will learn to differentiate the roles and responsibilities of owners, family members (whether involved in management or not), independent directors and executives. Khalid aims - through family business workshops to educate people on how to develop new governance and leadership mindsets and gain confidence in their ability to apply them in practice. In the workshop he conducts, he encourages the growth and profitability of the family business to reach its true potential. Khalid believes that every family business is unique and complex in its own way, therefore he has to understand the family dynamic in which he working with in order to conduct a tailor made workshop that will enable them to understand and accomplish goals.',
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
@@ -318,22 +297,11 @@ class Workshops extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
             ),
+
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                '''3- Youth Empowerment
-                  Khalid's main focus when it comes to the youth is to challenge them in order to make
-                  them improve, and this is one of the benefits of the youth empowerment workshops he
-                  conducts. During his workshop, the youth will learn to take responsibility for their life,
-                  mastering emotions, and raising selfawareness. Khalid wants the youth to
-                  take charge of their lives, this will happen through addressing their situations and then
-                  take action in order to improve their access to resources and transform their awareness
-                  through their beliefs, values, and attitudes. Youth empowerment workshops aim to
-                  improve the quality of life. Khalid focuses in this workshop in creating greater community
-                  changes that relay on the development of the individuals - youth. This is accomplished
-                  through positive sense of self, self control, decision making skills, moral system or
-                  beliefs, and pro-social connections.''',
-                // Style for the third paragraph
+                '3- Youth Empowerment Khalid\'s main focus when it comes to the youth is to challenge them in order to make them improve, and this is one of the benefits of the youth empowerment workshops he conducts. During his workshop, the youth will learn to take responsibility for their life, mastering emotions, and raising selfawareness. Khalid wants the youth to take charge of their lives, this will happen through addressing their situations and then take action in order to improve their access to resources and transform their awareness through their beliefs, values, and attitudes. Youth empowerment workshops aim to improve the quality of life. Khalid focuses in this workshop in creating greater community changes that relay on the development of the individuals - youth. This is accomplished through positive sense of self, self control, decision making skills, moral system or beliefs, and pro-social connections.',
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
@@ -342,9 +310,6 @@ class Workshops extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
             ),
-            // Expanded(
-            //   child: SizedBox(), // This will fill remaining space
-            // ),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
