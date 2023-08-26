@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:flutter_svg/flutter_svg.dart';
 
-class InternshipService extends StatelessWidget {
-  InternshipService({Key? key}) : super(key: key);
+class CoachingService extends StatelessWidget {
+  CoachingService({Key? key}) : super(key: key);
 
   final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
   @override
@@ -239,7 +239,7 @@ class InternshipService extends StatelessWidget {
                 //Rounds the corners of the image
                 borderRadius: BorderRadius.circular(20.0),
                 child: Image.asset(
-                  'asset/Internship.jpg',
+                  'asset/Coaching.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -254,7 +254,7 @@ class InternshipService extends StatelessWidget {
                   color: Colors.grey[300],
                 ),
                 child: Text(
-                  'Virtual Internship Program',
+                  'Coaching',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       shadows: <Shadow>[
@@ -275,7 +275,7 @@ class InternshipService extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
               child: Text(
-                'AlQoud Foundation provides a Virtual Internship Program where interns have the chance to select the department he/she is keen to be trained in order to gain experience and knowledge.',
+                'AlQoud offers three different types of coaching services: Life and Career Coaching, Executive Coaching, and Organizational Coaching.',
                 // Style for the first paragraph
                 style: TextStyle(
                   fontSize: 16,
@@ -289,7 +289,7 @@ class InternshipService extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
               child: Text(
-                'This program includes two sections - Daily Workshops and Department Tasks. By the end of the program, each intern will have an Experience Letter and a complimentary Certificate of Completion.',
+                'The life and career coaching offered by AlQoud will help you to realize your true potential. From clarity on what you want, to formulating strategies and techniques that can facilitate you to reach your goal and life in your career.',
                 // Style for the second paragraph
                 style: TextStyle(
                     fontSize: 16,
@@ -300,10 +300,23 @@ class InternshipService extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
               child: Text(
-                'In cases where the intern is found to have an outstanding performance, it will result in an opportunity to work with us.',
-                // Style for the third paragraph
+                'In order to help you to achieve your goals and be the best version of yourself as a leader or a whole person, executive coaching is the right one for you. This type of coaching focuses on your advancement as you wish it to be and how you wish it to evolve. Through these executive coaching sessions, you will be able to advance and find concrete results in your workplace, gain confidence, and improve various skills such as leadership, communication, and team building.',
+                // Style for the second paragraph
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.grey[800],
+                    wordSpacing: 1),
+                textAlign: TextAlign.start,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+              child: Text(
+                'The organizational coaching services can assist in identifying and creating clarity around key business goals and establish effective management strategies to ensure goals are met.',
+                // Style for the second paragraph
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
