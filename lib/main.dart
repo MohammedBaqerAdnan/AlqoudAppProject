@@ -15,6 +15,7 @@ import 'package:flutter_alqoud/Workshops.dart';
 import 'package:flutter_alqoud/SpeakerProfile.dart';
 import 'package:flutter_alqoud/EnglishCV.dart';
 import 'package:flutter_alqoud/ArabicCV.dart';
+import 'package:flutter_alqoud/ThankYou.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         "/SpeakerProfile": (context) => SpeakerProfile(),
         "/EnglishCV": (context) => EnglishCV(),
         "/ArabicCV": (context) => ArabicCV(),
+        "/ThankYou": (context) => ThankYou(),
       },
     );
   }
