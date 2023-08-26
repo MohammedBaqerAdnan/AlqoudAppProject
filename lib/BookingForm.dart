@@ -319,7 +319,10 @@ class BookingForm extends StatelessWidget {
                     margin: EdgeInsets.only(top: 20.0),
                     child: SizedBox(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, "/ThankYou");
+                          print('Submit tapped!');
+                        },
                         child: Text("Submit"),
                       ),
                     ),
