@@ -90,7 +90,7 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                            MaterialStateProperty.all(Colors.grey[300]),
+                                MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -123,7 +123,7 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                            MaterialStateProperty.all(Colors.grey[300]),
+                                MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -159,9 +159,9 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                            // MaterialStateProperty.all(Colors.grey[300]),
-                            MaterialStateProperty.resolveWith<Color?>(
-                                  (Set<MaterialState> states) {
+                                // MaterialStateProperty.all(Colors.grey[300]),
+                                MaterialStateProperty.resolveWith<Color?>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed))
                                   return Colors.grey[300];
                                 return Colors.amber[500];
@@ -200,7 +200,7 @@ class Services extends StatelessWidget {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                            MaterialStateProperty.all(Colors.grey[300]),
+                                MaterialStateProperty.all(Colors.grey[300]),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -251,7 +251,7 @@ class Services extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
                         color: Colors.amber[
-                        500]), // fontWeight: FontWeight.w700, color: Colors.grey[800]
+                            500]), // fontWeight: FontWeight.w700, color: Colors.grey[800]
                   ),
                 ),
               ),
@@ -273,8 +273,9 @@ class Services extends StatelessWidget {
                             //}
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, "/BusinessPlanConsultService");
-                                print('Business Plan tapped!');
+                                Navigator.pushNamed(
+                                    context, "/BusinessPlanConsultService");
+                                // print('Business Plan tapped!');
                               },
                               child: Container(
                                 width: 150,
@@ -307,8 +308,9 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, "/InternshipService");
-                                print('Internship tapped!');
+                                Navigator.pushNamed(
+                                    context, "/InternshipService");
+                                // print('Internship tapped!');
                               },
                               child: Container(
                                 width: 150,
@@ -339,8 +341,8 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, "/Workshops");
-                                print('Workshops tapped!');
+                                Navigator.pushNamed(context, "/Workshops");
+                                // print('Workshops tapped!');
                               },
                               child: Container(
                                 width: 150,
@@ -371,8 +373,9 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, "/CateringService");
-                                print('Catering tapped!');
+                                Navigator.pushNamed(
+                                    context, "/CateringService");
+                                // print('Catering tapped!');
                               },
                               child: Container(
                                 width: 150,
@@ -405,8 +408,9 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, "/EventManagementService");
-                                print('Event Management tapped!');
+                                Navigator.pushNamed(
+                                    context, "/EventManagementService");
+                                // print('Event Management tapped!');
                               },
                               child: Container(
                                 width: 150,
@@ -437,8 +441,9 @@ class Services extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.pushReplacementNamed(context, "/CoachingService");
-                                print('Coaching tapped!');
+                                Navigator.pushNamed(
+                                    context, "/CoachingService");
+                                // print('Coaching tapped!');
                               },
                               child: Container(
                                 width: 150,
