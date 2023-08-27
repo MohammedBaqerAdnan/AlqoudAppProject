@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
+// ignore: must_be_immutable
 class BookingForm extends StatelessWidget {
   BookingForm({Key? key}) : super(key: key);
 
@@ -328,20 +329,19 @@ class BookingForm extends StatelessWidget {
                       print(phone.number);
                     },
                   ),
-
                   DropdownButtonFormField(
                     focusColor: Colors.grey[300],
                     dropdownColor: Colors.grey[50],
                     padding: EdgeInsets.zero,
                     borderRadius: BorderRadius.circular(8),
                     decoration: InputDecoration(
-                    labelText: 'Services',
-                    border: OutlineInputBorder(
-                    borderSide: BorderSide(
-                    color: Colors.lightBlueAccent,
-                    width: 2,
-                    ),
-                    ),
+                      labelText: 'Services',
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.lightBlueAccent,
+                          width: 2,
+                        ),
+                      ),
                     ),
 
                     // Initial Value
@@ -365,7 +365,6 @@ class BookingForm extends StatelessWidget {
                       });
                     },
                   ),
-                  
                   Container(
                     margin: EdgeInsets.only(top: 20.0),
                     child: SizedBox(
@@ -374,6 +373,9 @@ class BookingForm extends StatelessWidget {
                           Navigator.pushReplacementNamed(context, "/ThankYou");
                           print('Submit tapped!');
                         },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.amber[500],
+                        ),
                         child: Text("Submit"),
                       ),
                     ),
