@@ -278,8 +278,8 @@ class Services extends StatelessWidget {
                                 // print('Business Plan tapped!');
                               },
                               child: Container(
-                                width: 150,
-                                height: 150,
+                                width: 130,
+                                height: 130,
                                 padding: EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[300],
@@ -313,8 +313,8 @@ class Services extends StatelessWidget {
                                 // print('Internship tapped!');
                               },
                               child: Container(
-                                width: 150,
-                                height: 150,
+                                width: 130,
+                                height: 130,
                                 padding: EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[300],
@@ -345,8 +345,8 @@ class Services extends StatelessWidget {
                                 // print('Workshops tapped!');
                               },
                               child: Container(
-                                width: 150,
-                                height: 150,
+                                width: 130,
+                                height: 130,
                                 padding: EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[300],
@@ -378,8 +378,8 @@ class Services extends StatelessWidget {
                                 // print('Catering tapped!');
                               },
                               child: Container(
-                                width: 150,
-                                height: 150,
+                                width: 130,
+                                height: 130,
                                 padding: EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[300],
@@ -413,8 +413,8 @@ class Services extends StatelessWidget {
                                 // print('Event Management tapped!');
                               },
                               child: Container(
-                                width: 150,
-                                height: 150,
+                                width: 130,
+                                height: 130,
                                 padding: EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[300],
@@ -446,8 +446,8 @@ class Services extends StatelessWidget {
                                 // print('Coaching tapped!');
                               },
                               child: Container(
-                                width: 150,
-                                height: 150,
+                                width: 130,
+                                height: 130,
                                 padding: EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[300],
