@@ -77,7 +77,7 @@ class SpeakerProfile extends StatelessWidget {
           ),
         ),
         //pdf viewer using pdf asset
-        body: SfPdfViewer.asset('asset/SampleCV.pdf'),
+        body: SfPdfViewer.asset('asset/KQprofile.pdf'),
       ),
     );
   }
