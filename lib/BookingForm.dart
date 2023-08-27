@@ -4,6 +4,19 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 class BookingForm extends StatelessWidget {
   BookingForm({Key? key}) : super(key: key);
 
+  // Initial Selected Value
+  String dropdownvalue = 'Business Plan Consult';
+
+  // List of items in our dropdown menu
+  var items = [
+    'Business Plan Consult',
+    'Catering',
+    'Coaching',
+    'Event Management',
+    'Internship',
+    'Workshops',
+  ];
+
   final _formKey = GlobalKey<FormState>();
   final GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   @override
@@ -315,6 +328,44 @@ class BookingForm extends StatelessWidget {
                       print(phone.number);
                     },
                   ),
+
+                  DropdownButtonFormField(
+                    focusColor: Colors.grey[300],
+                    dropdownColor: Colors.grey[50],
+                    padding: EdgeInsets.zero,
+                    borderRadius: BorderRadius.circular(8),
+                    decoration: InputDecoration(
+                    labelText: 'Services',
+                    border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                    color: Colors.lightBlueAccent,
+                    width: 2,
+                    ),
+                    ),
+                    ),
+
+                    // Initial Value
+                    value: dropdownvalue,
+
+                    // Down Arrow Icon
+                    icon: const Icon(Icons.keyboard_arrow_down),
+
+                    // Array list of items
+                    items: items.map((String items) {
+                      return DropdownMenuItem(
+                        value: items,
+                        child: Text(items),
+                      );
+                    }).toList(),
+                    // After selecting the desired option,it will
+                    // change button value to selected value
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        dropdownvalue = newValue!;
+                      });
+                    },
+                  ),
+                  
                   Container(
                     margin: EdgeInsets.only(top: 20.0),
                     child: SizedBox(
@@ -335,4 +386,6 @@ class BookingForm extends StatelessWidget {
       ),
     );
   }
+
+  void setState(Null Function() param0) {}
 }
