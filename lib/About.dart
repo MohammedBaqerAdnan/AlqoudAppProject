@@ -345,26 +345,6 @@ class About extends StatelessWidget {
                         ),
                       ),
                     ],
-                    /*child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber[500], // Different color as required
-                        borderRadius:
-                            BorderRadius.circular(15), // Rounded corners
-                      ),
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Speaker Profile', // Changed text
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey[800],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),*/
                   ),
                   SizedBox(width: 10), // For spacing between containers
                   Expanded(
@@ -393,33 +373,13 @@ class About extends StatelessWidget {
                               child: Text(
                                 'Speaker Arabic CV', // Changed text
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 13,
                                   color: Colors.grey[800],
                                 ),
                               ),
                             ),
                           ),
                         ),
-                        /*Container(
-                          // Increased height and width
-                          height: 35,
-                          width: 200,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[300], // Background color
-                            borderRadius:
-                                BorderRadius.circular(15), // Rounded corners
-                          ),
-                          padding: EdgeInsets.all(
-                              10.0), // Padding for non-attachment
-                          child: Text(
-                            'Speaker Arabic CV', // Changed text
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.grey[800],
-                            ),
-                          ),
-                        ),*/
                         SizedBox(height: 10),
                         MouseRegion(
                           cursor: SystemMouseCursors.click,
@@ -443,33 +403,13 @@ class About extends StatelessWidget {
                               child: Text(
                                 'Speaker English CV', // Changed text
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 13,
                                   color: Colors.grey[800],
                                 ),
                               ),
                             ),
                           ),
                         ),
-                        /*Container(
-                          // Increased height and width
-                          height: 35,
-                          width: 200,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[300], // Background color
-                            borderRadius:
-                                BorderRadius.circular(15), // Rounded corners
-                          ),
-                          padding: EdgeInsets.all(
-                              10.0), // Padding for non-attachment
-                          child: Text(
-                            'Speaker English CV', // Changed text
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.grey[800],
-                            ),
-                          ),
-                        ),*/
                       ],
                     ),
                   ),
