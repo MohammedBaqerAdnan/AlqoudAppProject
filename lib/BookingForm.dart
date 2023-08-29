@@ -268,7 +268,7 @@ class _BookingFormState extends State<BookingForm> {
                       if (value == null || value.isEmpty)
                         return 'Field is required.';
                       String pattern =
-                          r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{,50}$';
+                          r'^(?=.*?[A-Z])||(?=.*?[a-z])||(?=.*?[0-9])||(?=.*?[!@#\$&*~]).{1,51}$';
                       if (!RegExp(pattern).hasMatch(value))
                         return '''
                               Notes must be at less then 51 characters,
